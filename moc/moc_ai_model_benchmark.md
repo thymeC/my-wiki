@@ -104,13 +104,77 @@
 
 ---
 
+## 编程 Code 专项榜单（2026年4月）
+
+> ⚠️ SWE-bench Verified 存在数据污染问题（OpenAI 内部审计发现训练数据泄露），建议参考 SWE-bench Pro（Scale AI 独立评测，污染可控）。
+
+### SWE-bench Verified（500题，污染方向偏高分）
+
+| 排名 | 模型 | Verified | 备注 |
+|------|------|----------|------|
+| 1 | **Claude Mythos Preview** | **93.9%** | Anthropic（推理模式） |
+| 2 | **GPT-5.3 Codex** | **85.0%** | OpenAI 编程专项 |
+| 3 | **Claude Opus 4.6** | 80.9% | Anthropic |
+| 4 | **Claude Opus 4.5** | 80.9% | Anthropic |
+| 5 | **Claude Sonnet 4.6** | 78.0% | Anthropic（性价比） |
+| 6 | **Gemini 3.1 Pro Preview** | 78.8% | Google |
+| 7 | **GPT-5.4** | 78.2% | OpenAI |
+| 8 | **DeepSeek V4 Pro** | 80.6% | DeepSeek |
+| 9 | **MiniMax M2.5** | 80.2% | MiniMax |
+| 10 | **Kimi K2.5** | 70.8% | Moonshot（老版本） |
+
+### SWE-bench Pro（1865题，Scale AI 独立评测，污染可控）
+
+> 最难、最干净的真实编程评测，私人代码库+商业代码库无法污染
+
+| 排名 | 模型 | Pro | 备注 |
+|------|------|------|------|
+| 1 | **Kimi K2.6** | **58.6%** | Moonshot AI（开源，2026-04-20） |
+| 2 | **GPT-5.4** | 57.7% | OpenAI |
+| 3 | **Claude Opus 4.6** | 53.4% | Anthropic |
+| 4 | **DeepSeek V4 Pro** | 55.4% | DeepSeek |
+| 5 | **GLM-5** | 77.8% | 智谱（引用数据，待确认） |
+
+### HumanEval（164题函数补全，最经典但最简单）
+
+| 排名 | 模型 | HumanEval |
+|------|------|----------|
+| 1 | **Claude Opus 4.6** | **96.4%** |
+| 2 | **GPT-5.4** | 96.3% |
+| 3 | **GPT-5.3 Codex** | 95.8% |
+| 4 | **Claude Sonnet 4.6** | 93.8% |
+| 5 | **Gemini 3.1 Pro** | 93.2% |
+| 6 | **Kimi K2.6** | 90.1% |
+| 7 | **DeepSeek V4 Pro** | 93.5% |
+
+### LiveCodeBench（最新代码能力连续评测）
+
+| 排名 | 模型 | LiveCodeBench |
+|------|------|---------------|
+| 1 | **Kimi K2.6** | **~75%**（全场领先） |
+| 2 | **DeepSeek V4 Pro** | 55.4% |
+
+### 编程选型建议
+
+| 场景 | 推荐 | 原因 |
+|------|------|------|
+| **真实 Bug 修复（生产环境）** | Claude Opus 4.7 | Verified 82%，Pro 独立验证最强 |
+| **成本敏感** | Kimi K2.6 | 开源，Pro 58.6%，价格 $0.60/M |
+| **竞赛/函数级代码** | GPT-5.4 / Claude Opus 4.6 | HumanEval 96%+ |
+| **最新代码能力** | Kimi K2.6 | LiveCodeBench 领先 |
+| **中文项目** | DeepSeek V4 Pro / GLM-5 | 中文代码专项优化 |
+
+---
+
 ## 分项冠军（2026年4月）
 
 | 场景 | 冠军 | 分数 |
 |------|------|------|
 | **综合得分** | GPT-5.5 High | 98.1 |
 | **用户偏好 Arena** | Claude Opus 4.7 Thinking | 1504 Elo |
-| **编程 SWE-bench** | Claude Opus 4.7 | 82.0% |
+| **编程 SWE-bench Verified** | Claude Mythos Preview | 93.9% |
+| **编程 SWE-bench Pro（干净）** | Kimi K2.6 | 58.6% |
+| **编程 HumanEval** | Claude Opus 4.6 | 96.4% |
 | **数学 MATH** | Claude Opus 4.6 | 98.2% |
 | **科学推理 GPQA** | Gemini 3.1 Pro | 94.1% |
 | **推理综合 AA Index** | Claude 4.7 / Gemini 3.1 / GPT-5.4 | 并列 57 |
