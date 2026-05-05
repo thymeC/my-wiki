@@ -1,6 +1,7 @@
 # 编程核心知识速查（Python 示例）
 
-> 面向个人知识库的 80/20 速查稿：定义 + 要点 + 最小示例 + 误区/考点。权威落地规则见 [[REPO_LAYOUT]]。
+> 面向个人知识库的 80/20 速查稿：定义 + 要点 + 最小示例 + 误区/考点。权威落地规则见 [[REPO_LAYOUT]]。  
+> 分语言速查：[[python-quick-guide]] · [[go-quick-guide]] · [[java-quick-guide]] · [[javascript-typescript-quick-guide]]；框架入口：[[python-frameworks-index]] · [[spring-boot-guide]] · [[go-frameworks-index]] · [[react-concepts-guide]] · [[vue-guide]]。
 
 ## 目录
 

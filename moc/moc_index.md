@@ -19,6 +19,7 @@
 | 主题 MOC | 说明 |
 |----------|------|
 | [[moc_ai_model_benchmark]] | AI 主流模型 Benchmark 评测结果汇总 |
+| [[moc_ide_plugins]] | IDE / 编辑器插件与主题（含 Cursor 等） |
 | [[organization-models-reference]] | **目录/PKM 模型通识**（合并稿，在 `areas/management/`） |
 | [[moc_category_rule]] · [[moc_organization_models]] | 仅占位文件，链向合并稿，保留旧链接 |
 
@@ -27,9 +28,30 @@
 | 笔记链接 | 说明 |
 |----------|------|
 | [[programming-knowledge-core]] | 编程核心速查（语言通识 + 实践横切） |
-| [[react-concepts-guide]] | React 设计思想与 Hooks 概念 |
 | [[design-patterns-guide]] | 设计模式速查 |
 | [[dsa-guide-with-code]] | 数据结构与算法（含代码） |
+
+**语言速查（`languages/`）**
+
+| 笔记链接 | 说明 |
+|----------|------|
+| [[python-quick-guide]] | Python：思想 · 核心概念 · 数据结构 |
+| [[go-quick-guide]] | Go：思想 · 并发 · slice/map |
+| [[java-quick-guide]] | Java：JVM · 集合 · 并发一瞥 |
+| [[javascript-typescript-quick-guide]] | JS/TS：事件循环 · 类型 · 异步 |
+
+**框架与前端（`frameworks/` + `tools/`）**
+
+| 笔记链接 | 说明 |
+|----------|------|
+| [[python-frameworks-index]] | Python Web 总索引与对比 |
+| [[python-flask-guide]] · [[python-fastapi-guide]] · [[python-django-guide]] | Python 三大 Web 框架（各一篇） |
+| [[python-sqlalchemy-guide]] · [[python-celery-guide]] | ORM / 任务队列 |
+| [[spring-boot-guide]] | Java：Spring Boot |
+| [[go-frameworks-index]] | Go Web 总索引 |
+| [[go-net-http-guide]] · [[go-gin-guide]] · [[go-echo-guide]] · [[go-chi-guide]] | Go 标准库与主流路由 |
+| [[react-concepts-guide]] | React：思想与 Hooks（`tools/`） |
+| [[vue-guide]] | Vue 3：组合式 API · 生态（`tools/`） |
 
 ### 新建 `moc_*.md` 时可用的结构
 

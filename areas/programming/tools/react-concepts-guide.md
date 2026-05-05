@@ -16,7 +16,9 @@
 - [九、Context：跨层传递](#九context跨层传递)
 - [十、自定义 Hook](#十自定义-hook)
 - [十一、虚拟 DOM 与协调（概念）](#十一虚拟-dom-与协调概念)
-- [十二、小结与延伸阅读](#十二小结与延伸阅读)
+- [十二、适用场景与生态选型](#十二适用场景与生态选型)
+- [十三、与 Vue / 其它方案对比](#十三与-vue--其它方案对比)
+- [十四、小结与延伸阅读](#十四小结与延伸阅读)
 
 ---
 
@@ -337,7 +339,39 @@ const ExpensiveRow = memo(function ExpensiveRow({ title }) {
 
 ---
 
-## 十二、小结与延伸阅读
+## 十二、适用场景与生态选型
+
+**React 最擅长解决的，是「把复杂 UI 状态拆成可组合的声明式组件」**，而不是「开箱即得全家桶」。
+
+| 场景 | 常见选型 |
+|------|----------|
+| 路由 | **React Router**、TanStack Router |
+| 服务端状态 / 缓存 | **TanStack Query**、SWR、RTK Query |
+| 客户端全局状态 | **Zustand**、Redux Toolkit、Jotai（按团队复杂度选） |
+| 表单 | React Hook Form、Formik |
+| 元框架（SSR/SSG） | **Next.js**、Remix、Astro（React 岛） |
+
+**心智**：React 核心只管 **渲染与组件模型**；**数据从哪来、URL 怎么变** 由生态补齐，因此 **组合自由度高**，也意味着 **架构决策要自己做**。
+
+---
+
+## 十三、与 Vue / 其它方案对比
+
+| 维度 | React | Vue 3 |
+|------|-------|-------|
+| 模板 | **JSX**（JS 里写标签） | **单文件模板** + 可选 JSX |
+| 响应式 | 显式 `setState` / `useState` 触发更新 | **Proxy** 追踪依赖，改数据即驱动视图 |
+| 逻辑复用 | **Hooks**（有调用顺序规则） | **Composables**（普通函数，灵活度高） |
+| 官方全家桶 | 弱（路由/状态另选） | **Vue Router + Pinia** 官方维护 |
+| 学习曲线 | JSX + Hooks 规则需适应 | 模板 + 组合式 API 对新手常更直观 |
+
+**与 Svelte / Solid（简）**：编译期优化更重，运行时更小；生态与招聘面通常 **React/Vue 更大**。
+
+**选型直觉**：强 TS 大型应用、与设计系统深度定制 → **React** 很常见；希望 **模板可读 + 官方栈一体** → **Vue**。详见对照篇 [[vue-guide]]。
+
+---
+
+## 十四、小结与延伸阅读
 
 | 概念 | 一句话 |
 |------|--------|
@@ -351,4 +385,5 @@ const ExpensiveRow = memo(function ExpensiveRow({ title }) {
 | Hook | 复用状态逻辑，遵守 Hooks 规则 |
 
 **官方文档**： [react.dev](https://react.dev)（新版文档含图与沙箱）。  
-**下一步笔记**：React Router、数据获取模式、状态管理（Zustand/Redux Toolkit）、错误边界与 Suspense，可单独建 `moc_react` 或在 `areas/programming/tools/` 续写。
+**对照阅读**：[[vue-guide]]。  
+**下一步笔记**：React Router、TanStack Query、错误边界与 Suspense，可单独建 `moc_react` 或在 `areas/programming/tools/` 续写。
