@@ -18,6 +18,7 @@
 
 | 主题 MOC | 说明 |
 |----------|------|
+| [[moc_ai_model_benchmark]] | AI 主流模型 Benchmark 评测结果汇总 |
 | [[organization-models-reference]] | **目录/PKM 模型通识**（合并稿，在 `areas/management/`） |
 | [[moc_category_rule]] · [[moc_organization_models]] | 仅占位文件，链向合并稿，保留旧链接 |
 
