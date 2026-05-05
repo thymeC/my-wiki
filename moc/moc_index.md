@@ -22,6 +22,15 @@
 | [[organization-models-reference]] | **目录/PKM 模型通识**（合并稿，在 `areas/management/`） |
 | [[moc_category_rule]] · [[moc_organization_models]] | 仅占位文件，链向合并稿，保留旧链接 |
 
+### `areas/programming/` 成稿入口（从 MOC 直达）
+
+| 笔记链接 | 说明 |
+|----------|------|
+| [[programming-knowledge-core]] | 编程核心速查（语言通识 + 实践横切） |
+| [[react-concepts-guide]] | React 设计思想与 Hooks 概念 |
+| [[design-patterns-guide]] | 设计模式速查 |
+| [[dsa-guide-with-code]] | 数据结构与算法（含代码） |
+
 ### 新建 `moc_*.md` 时可用的结构
 
 ```markdown
