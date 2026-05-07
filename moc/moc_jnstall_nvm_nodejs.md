@@ -56,3 +56,58 @@ npm -v     # 应返回 10.x.x 或更高版本[reference:9]
 ⚠️ 重要提示：请避免在同一系统上混用上述两种方式，因为它们管理路径的方式不同，可能会互相冲突导致命令失效。
 
 如果遇到版本切换不生效、全局包权限不足或其他具体报错，可以随时告诉我详情，我帮你进一步排查。
+
+在 CentOS 上安装 Node.js 25.3.0 有几种方法，其中 NVM (Node Version Manager) 是最灵活、最推荐的，尤其适合需要多版本管理的开发环境。
+
+🚀 方法一：使用 NVM 安装与管理
+
+NVM 可以在用户级别安装和管理 Node.js，无需 sudo，非常适合版本切换频繁的场景。
+
+```bash
+# 1. 安装 NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+source ~/.bashrc
+
+# 2. 确认安装 NVM
+nvm --version
+
+# 3. 查看 25.3.0 版本是否支持
+nvm list available
+
+# 4. 安装 Node.js 25.3.0
+nvm install 25.3.0
+
+# 5. 切换到新版本并设为默认
+nvm use 25.3.0 && nvm alias default 25.3.0
+
+# 6. 验证安装
+node --version
+```
+
+```bash
+# 可选清理（如果之前用 yum 安装过）
+sudo yum remove -y nodejs
+```
+
+🛠️ 方法二：使用 NodeSource 仓库安装
+
+NodeSource 提供的是系统级的二进制包，适合为系统固定某个主版本。但它提供的是 25.x 系列的最新版，可能无法精确锁定为 25.3.0。
+
+```bash
+# 1. 移除已安装的旧版本
+sudo yum remove -y nodejs
+
+# 2. 添加 NodeSource 仓库
+curl -fsSL https://rpm.nodesource.com/setup_25.x | sudo bash -
+
+# 3. 安装
+sudo yum install -y nodejs
+
+# 4. 验证安装
+node --version  # 输出应为 v25.x.x
+```
+
+📝 两种方法，如何选择？
+
+· 推荐 NVM：无需 sudo，安装、切换、卸载都非常方便，可随时切换回旧版本（如 nvm use 16），适合日常开发和测试。
+· NodeSource 方案：这是生产环境的标准选择，提供系统级的全局安装，确保所有系统用户都使用同一版本，易于统一维护。不过它的版本更新到最新，无法精确固定在 25.3.0。
