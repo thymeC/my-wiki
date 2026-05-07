@@ -163,6 +163,7 @@ sudo systemctl reload nginx # 修改配置后推荐使用 reload，更平滑
 sudo systemctl status nginx
 ```
 
+
 🔧 方案扩展与问题排查
 
 · 部署更新：当项目有更新时，只需重新 npm run build 并将新 build 文件上传覆盖即可。对于 Nginx 方案，直接替换文件无需重启服务；对于 serve 方案，替换后可能需要 sudo systemctl restart react-frontend。
