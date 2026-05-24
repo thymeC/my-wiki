@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <meta name="description" content="my-wiki — 个人知识库" />
+  <title>my-wiki</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/dark.css" title="dark" disabled />
+  <link rel="stylesheet" href="site/custom.css" />
+</head>
+<body>
+  <div id="app">加载中…</div>
+
+  <script src="site/wiki-links.js"></script>
+  <script>
+    (function () {
+      var parts = location.pathname.split("/").filter(Boolean);
+      var basePath = "/";
+      if (location.hostname.endsWith("github.io") && parts.length >= 1) {
+        basePath = "/" + parts[0] + "/";
+      }
+      window.$docsify = {
+        name: "my-wiki",
+        repo: "",
+        basePath: basePath,
+        homepage: "moc/moc_index.md",
+        loadSidebar: "_sidebar.md",
+        subMaxLevel: 3,
+        auto2top: true,
+        relativePath: false,
+        maxLevel: 4,
+        alias: {
+          "/.*/_sidebar.md": "/_sidebar.md",
+        },
+        search: {
+          maxAge: 86400000,
+          paths: "auto",
+          placeholder: "搜索笔记…",
+          noData: "没有结果",
+          depth: 6,
+        },
+        copyCode: {
+          buttonText: "复制",
+          errorText: "失败",
+          successText: "已复制",
+        },
+        pagination: {
+          previousText: "上一页",
+          nextText: "下一页",
+        },
+        plugins: [window.wikiLinkPlugin],
+      };
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-jsx.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script>
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.querySelector('link[title="dark"]').disabled = false;
+      document.querySelector('link[href*="vue.css"]').disabled = true;
+    }
+  </script>
+</body>
+</html>

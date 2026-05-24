@@ -1,0 +1,10 @@
+Extract from cursor thinking
+Docsify is a static site generator tailored for documentation, offering simplicity and ease of use for markdown-based wikis. Other mainstream options include Docusaurus, MkDocs, and GitBook, each providing distinct features for building documentation websites.
+
+Docsify is a client-side static site generator for markdown wikis with no build step, featuring sidebar navigation and search plugins, making it suitable for GitHub Pages. VitePress offers a Vue-based approach with a polished look but requires a build step. MkDocs Material uses Python and provides extensive themes and a build process. Docusaurus, built on React, is ideal for large documentation sites but is more complex. Quartz is popular for digital gardens and supports markdown transformation.
+
+Obsidian Publish is a paid, non-self-hosted option. GitBook operates as a SaaS platform. Hugo with a theme delivers fast static site generation, while mdBook is a Rust-based tool that is simple to use.
+
+For personal wikis with Obsidian-style links, existing GitHub presence, desire for better aesthetics than custom HTML, and Chinese content, Docsify stands out. It requires no build step, supports sidebar navigation, search, and multiple themes, and works well with GitHub Pages. However, it lacks native wikilink support without plugins or pre-processing, has weaker SEO due to client-side rendering, and depends on JavaScript for initial loading.
+
+VitePress offers a beautiful, fast experience ideal for technical documentation but requires plugins for wikilinks. MkDocs Material provides a highly polished interface with built-in search and navigation, though wikilinks need additional extensions. Quartz is designed for Obsidian users, supporting wikilinks and graph views, making it a strong choice for Obsidian vaults.

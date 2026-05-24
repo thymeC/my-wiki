@@ -1,0 +1,40 @@
+/* Docsify 微调：更像文档站，少像裸 Markdown */
+:root {
+  --theme-color: #0969da;
+  --content-max-width: 920px;
+}
+
+.sidebar {
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-nav > ul > li > p > strong {
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #656d76;
+}
+
+.markdown-section {
+  max-width: var(--content-max-width);
+  padding-top: 2rem;
+}
+
+.markdown-section pre {
+  border-radius: 8px;
+}
+
+.wikilink-missing {
+  color: #656d76;
+  font-style: italic;
+  background: rgba(175, 184, 193, 0.2);
+  padding: 0 0.25rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sidebar {
+    border-right-color: rgba(255, 255, 255, 0.08);
+  }
+}
