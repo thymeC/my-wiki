@@ -1,5 +1,7 @@
 /** Obsidian [[wikilink]] → Docsify markdown link */
 window.WIKI_LINKS = {
+  README: "README.md",
+  DEVELOPER: "DEVELOPER.md",
   REPO_LAYOUT: "REPO_LAYOUT.md",
   moc_index: "moc/moc_index.md",
   moc_ai_model_benchmark: "moc/moc_ai_model_benchmark.md",

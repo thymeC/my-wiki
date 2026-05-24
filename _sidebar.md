@@ -1,6 +1,8 @@
 * [MOC 总索引](moc/moc_index.md)
 
 * **入门**
+  * [README（项目说明）](README.md)
+  * [开发者说明（Docsify 部署）](DEVELOPER.md)
   * [仓库说明](REPO_LAYOUT.md)
 
 * **MOC**
