@@ -5,8 +5,6 @@ Thumbs.db
 # JetBrains / IntelliJ
 .idea/
 
-# Obsidian — UI layout changes every session; rest of `.obsidian/` can stay tracked if you sync plugins/settings
-.obsidian/workspace.json
 .obsidian/
 
 # Editor backups / swap

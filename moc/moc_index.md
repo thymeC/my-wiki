@@ -50,6 +50,8 @@
 | [[spring-boot-guide]] | Java：Spring Boot |
 | [[go-frameworks-index]] | Go Web 总索引 |
 | [[go-net-http-guide]] · [[go-gin-guide]] · [[go-echo-guide]] · [[go-chi-guide]] | Go 标准库与主流路由 |
+| [[frontend-stack-index]] | 前端栈索引：React（库）· Vue（框架）· 元框架 |
+| [[react-ecosystem-guide]] · [[vue-framework-guide]] | React 库与生态 · Vue 框架（`frameworks/`） |
 | [[react-concepts-guide]] | React：思想与 Hooks（`tools/`） |
 | [[vue-guide]] | Vue 3：组合式 API · 生态（`tools/`） |
 

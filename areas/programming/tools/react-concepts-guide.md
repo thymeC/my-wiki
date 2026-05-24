@@ -1,7 +1,7 @@
 # React：设计思想与核心概念（含代码示例）
 
 > 帮助从「为什么这样设计」理解 React；示例以 **函数组件 + Hooks**（当前主流）为主。  
-> 姊妹篇：HTTP/REST 见 [[programming-knowledge-core]]；仓库规则 [[REPO_LAYOUT]]。
+> **React 是库，不是框架**；栈与元框架（Vite、Next、Router、Query）：[[react-ecosystem-guide]] · [[frontend-stack-index]]。HTTP/REST 见 [[programming-knowledge-core]]。仓库规则 [[REPO_LAYOUT]]。
 
 ## 目录
 
@@ -32,7 +32,7 @@
 | **状态驱动视图** | **状态变 → 重新计算 UI**（重新执行组件函数）。 | 少直接操作 DOM；改 `state` 即可。 |
 | **组合优于继承** | 用 **children / 插槽式 props** 拼功能，而不是深继承树。 | `<Layout><Main /></Layout>` 比类继承更常见。 |
 
-React 不负责路由、全局状态、请求库——这些由 **生态**（React Router、Redux/Zustand、TanStack Query 等）补齐，核心是 **渲染与组件模型**。
+React 不负责路由、全局状态、请求库——这些由 **生态**（React Router、Redux/Zustand、TanStack Query 等）补齐，核心是 **渲染与组件模型**。因此和 **Next.js / Remix** 这类「带路由与约定的应用框架」要分开记：**React = 库，Next = 框架（基于 React）**。
 
 ---
 
@@ -359,6 +359,7 @@ const ExpensiveRow = memo(function ExpensiveRow({ title }) {
 
 | 维度 | React | Vue 3 |
 |------|-------|-------|
+| 官方定位 | **UI 库**（library） | **渐进式框架**（framework） |
 | 模板 | **JSX**（JS 里写标签） | **单文件模板** + 可选 JSX |
 | 响应式 | 显式 `setState` / `useState` 触发更新 | **Proxy** 追踪依赖，改数据即驱动视图 |
 | 逻辑复用 | **Hooks**（有调用顺序规则） | **Composables**（普通函数，灵活度高） |
@@ -367,7 +368,7 @@ const ExpensiveRow = memo(function ExpensiveRow({ title }) {
 
 **与 Svelte / Solid（简）**：编译期优化更重，运行时更小；生态与招聘面通常 **React/Vue 更大**。
 
-**选型直觉**：强 TS 大型应用、与设计系统深度定制 → **React** 很常见；希望 **模板可读 + 官方栈一体** → **Vue**。详见对照篇 [[vue-guide]]。
+**选型直觉**：强 TS 大型应用、与设计系统深度定制 → **React 库** 很常见；希望 **模板可读 + 官方栈一体** → **Vue 框架**。详见对照篇 [[vue-guide]]、栈选型 [[react-ecosystem-guide]]。
 
 ---
 
@@ -385,5 +386,5 @@ const ExpensiveRow = memo(function ExpensiveRow({ title }) {
 | Hook | 复用状态逻辑，遵守 Hooks 规则 |
 
 **官方文档**： [react.dev](https://react.dev)（新版文档含图与沙箱）。  
-**对照阅读**：[[vue-guide]]。  
+**对照阅读**：[[vue-guide]]；栈与元框架：[[react-ecosystem-guide]] · [[frontend-stack-index]]。  
 **下一步笔记**：React Router、TanStack Query、错误边界与 Suspense，可单独建 `moc_react` 或在 `areas/programming/tools/` 续写。

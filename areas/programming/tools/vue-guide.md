@@ -1,7 +1,7 @@
 # Vue 3 详解（设计思想 · 组合式 API · 生态 · 与 React 对比）
 
 > **渐进式框架**：从局部挂载到全站 SPA；**组合式 API** + **Proxy 响应式** + **SFC** 是当前默认主路径。  
-> 对照：[[react-concepts-guide]]；语言：[[javascript-typescript-quick-guide]]。仓库规则 [[REPO_LAYOUT]]。
+> **Vue 官方称框架**；栈与 Nuxt：[[vue-framework-guide]] · [[frontend-stack-index]]。对照 React（**库**）：[[react-concepts-guide]] · [[react-ecosystem-guide]]。语言：[[javascript-typescript-quick-guide]]。仓库规则 [[REPO_LAYOUT]]。
 
 ## 目录
 
@@ -252,6 +252,7 @@ export function useWindowWidth() {
 
 | 维度 | Vue 3 | React 18+ |
 |------|-------|-----------|
+| 官方定位 | **渐进式框架** | **UI 库**（应用框架见 Next/Remix） |
 | UI 表达 | 模板 + SFC | JSX 为主 |
 | 状态驱动 | Proxy 自动追踪 | `setState` / `useState` 显式触发 |
 | 逻辑复用 | Composables | Hooks（规则更严） |
@@ -264,5 +265,6 @@ export function useWindowWidth() {
 
 ## 十二、延伸阅读
 
-- [[react-concepts-guide]] — JSX、Hooks、生态选型对照。
+- [[react-concepts-guide]] — JSX、Hooks、与 Vue 对照。
+- [[react-ecosystem-guide]] — React **作为库** 与 Next 等元框架。
 - [[javascript-typescript-quick-guide]] — 事件循环、模块、TS 窄化。

@@ -232,6 +232,8 @@ module.exports = { x: 1 };
 
 ## 八、延伸阅读
 
+- [[frontend-stack-index]] — React（库）/ Vue（框架）与元框架总览。
+- [[react-ecosystem-guide]] · [[vue-framework-guide]] — 脚手架、Router、Next/Nuxt 等。
 - [[react-concepts-guide]] — 声明式 UI 与 Hooks。
 - [[vue-guide]] — 模板 + 响应式。
 - [[programming-knowledge-core]] — HTTP、Git、安全基础。

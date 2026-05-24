@@ -1,7 +1,7 @@
 # 编程核心知识速查（Python 示例）
 
 > 面向个人知识库的 80/20 速查稿：定义 + 要点 + 最小示例 + 误区/考点。权威落地规则见 [[REPO_LAYOUT]]。  
-> 分语言速查：[[python-quick-guide]] · [[go-quick-guide]] · [[java-quick-guide]] · [[javascript-typescript-quick-guide]]；框架入口：[[python-frameworks-index]] · [[spring-boot-guide]] · [[go-frameworks-index]] · [[react-concepts-guide]] · [[vue-guide]]。
+> 分语言速查：[[python-quick-guide]] · [[go-quick-guide]] · [[java-quick-guide]] · [[javascript-typescript-quick-guide]]；后端/全栈框架入口：[[python-frameworks-index]] · [[spring-boot-guide]] · [[go-frameworks-index]]；前端：[[frontend-stack-index]] · [[react-ecosystem-guide]]（**React 是库**）· [[vue-framework-guide]]；前端概念深度：[[react-concepts-guide]] · [[vue-guide]]。
 
 ## 目录
 
@@ -12,7 +12,7 @@
 - [软件开发实践](#软件开发实践)
 - [数据库基础](#数据库基础)
 - [网络基础](#网络基础)
-- [前端框架（React）](#前端框架react)
+- [前端库（React）](#前端库react)
 - [扩展思考题](#扩展思考题)
 
 ---
@@ -555,9 +555,9 @@ def get_user(user_id):
 
 ---
 
-## 前端框架（React）
+## 前端库（React）
 
-> 设计思想、核心概念与 Hooks 示例：[[react-concepts-guide]]（`areas/programming/tools/`）。
+> **React 是 UI 库，不是应用框架**；设计思想、Hooks 与和 Vue 的对照：[[react-concepts-guide]]；库 + Next/路由等：[[react-ecosystem-guide]]（`areas/programming/frameworks/`）。
 
 ---
 

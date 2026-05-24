@@ -89,7 +89,7 @@ my-wiki/
 | `areas/programming/ai/` | 编程 · AI |
 | `areas/programming/languages/` | 编程 · 编程语言 |
 | `areas/programming/frameworks/` | 编程 · 框架（Web/服务端等速查） |
-| `areas/programming/tools/` | 编程 · 工具与前端框架笔记 |
+| `areas/programming/tools/` | 编程 · 工具与前端笔记（如 React/Vue 概念稿） |
 | `areas/programming/algorithms/` | 编程 · 算法 |
 | `areas/sports/` | 运动 |
 | `areas/entertainment/` | 娱乐 |
