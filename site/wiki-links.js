@@ -6,6 +6,7 @@ window.WIKI_LINKS = {
   moc_index: "moc/moc_index.md",
   moc_ai_model_benchmark: "moc/moc_ai_model_benchmark.md",
   moc_ide_plugins: "moc/moc_ide_plugins.md",
+  moc_vscode_ide: "moc/moc_vscode_ide.md",
   moc_react_deployment: "moc/moc_react_deployment.md",
   moc_jnstall_nvm_nodejs: "moc/moc_jnstall_nvm_nodejs.md",
   moc_category_rule: "moc/moc_category_rule.md",

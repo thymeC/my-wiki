@@ -8,6 +8,7 @@
 * **MOC**
   * [AI Benchmark](moc/moc_ai_model_benchmark.md)
   * [IDE 插件与主题](moc/moc_ide_plugins.md)
+  * [VS Code / Cursor 界面缩放](moc/moc_vscode_ide.md)
   * [React 部署](moc/moc_react_deployment.md)
   * [安装 nvm / Node](moc/moc_jnstall_nvm_nodejs.md)
 
