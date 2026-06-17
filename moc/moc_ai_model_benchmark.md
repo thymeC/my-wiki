@@ -1,7 +1,7 @@
 # AI Model Benchmark 主流模型评测结果
 
-> 来源：neuralstackly.com (2026-04-29) / ofox.ai (2026-04-22) / LMSYS Arena Live (2026-04)
-> 状态：**2026年4月最新**
+> 来源：LMArena mirror / Cherry Studio (2026-06-16) / Artificial Analysis v4.1 (2026-06-16) / Vals.ai SWE-bench Verified (2026-06-13) / Morph SWE-bench Pro 汇总 (2026-06-09) / Awesome Agents 月榜 (2026-06-15)
+> 状态：**2026年6月中旬最新**
 
 ---
 
@@ -9,221 +9,209 @@
 
 | Benchmark | 含义 | 说明 |
 |-----------|------|------|
-| **MMLU** | 57 学科通识知识理解 | 90%+ 顶尖 |
-| **MATH** | 竞赛级数学题（Level 5 最难） | 95%+ 顶尖 |
-| **GPQA Diamond** | 研究生级别科学问答（专家约 65-70%） | 85%+ 超越专家 |
-| **HumanEval** | 164 道 Python 编程挑战 | 90%+ 顶尖 |
-| **SWE-bench Verified** | 真实 GitHub Issues 自主解决率 | 75%+ 顶尖 |
-| **Arena Elo** | LMSYS 盲测用户投票（越大越好） | 1400+ 顶尖 |
-| **AA Intelligence Index** | Artificial Analysis 综合推理指数 | 50+ 顶尖 |
-| **SimpleQA** | 事实准确性（越低越好，测 hallucination） | — |
+| **GPQA Diamond** | 研究生级别科学问答（专家约 65-70%） | 90%+ 顶尖 |
+| **SWE-bench Verified** | 500 个真实 GitHub Issue 修复任务 | 2026 年已接近饱和，适合作为方向信号 |
+| **SWE-bench Pro** | 1,865 个多语言真实工程任务，含私有商业代码库 | 当前更推荐的 coding benchmark |
+| **Arena Elo** | LMArena 盲测用户投票，人类偏好 | 动态变化快，注意日期和 vote volume |
+| **AA Intelligence Index** | Artificial Analysis 综合推理/代码/agentic 任务指数 | v4.1 起更偏向 agentic workload |
+| **GDPval-AA / Terminal-Bench** | 更接近知识工作/终端任务的 agentic benchmark | v4.1 权重提高 |
+| **HumanEval / MMLU** | 传统代码/知识题 | 对 frontier model 已明显饱和 |
 
-> 💡 **2026年4月关键变化**：GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro 三足鼎立；开源 Kimi K2.6 进入第一梯队；DeepSeek V4 强势开源；GPT-o 系列新秀登场。
-
----
-
-## 综合榜单（2026年4月）
-
-### Overall 榜单 — neuralstackly 综合评分
-
-| 排名 | 模型 | 公司 | MMLU | HumanEval | MATH | GPQA | Arena Elo | 综合分 | \$/1M In |
-|------|------|------|------|-----------|------|------|-----------|--------|---------|
-| 1 | **GPT-5.5 High** | OpenAI | 89.1 | 89.7 | 93.2 | 81.5 | 1488 | **98.1** | $2.49 |
-| 2 | **Claude Opus 4.6** | Anthropic | 95.6 | 96.4 | 98.2 | 91.0 | 1493 | **94.2** | $15.00 |
-| 3 | **Gemini 3.1 Pro** | Google | 94.3 | 93.2 | 98.1 | 94.1 | 1493 | **94.2** | $2.50 |
-| 4 | **GPT-5.4** | OpenAI | 93.8 | 96.3 | 97.9 | 92.8 | 1467 | **94.2** | $2.50 |
-| 5 | **Claude Opus 4.7** | Anthropic | 94.2 | 95.1 | 97.6 | 90.5 | 1496 | **90.3** | $15.00 |
-| 6 | **Kimi K2.6** | Moonshot AI | 91.8 | 90.1 | 96.5 | 85.4 | **1529** | **88.5** | $0.95 |
-| 6 | **GPT-5.3 Codex** | OpenAI | 91.2 | 95.8 | 96.2 | 84.8 | 1300 | **88.5** | $3.00 |
-| 8 | **Grok 4.20** | xAI | 91.2 | 91.5 | 95.1 | 79.4 | 1481 | **88.0** | $3.00 |
-| 9 | **GPT-5.4-mini** | OpenAI | 92.1 | 94.8 | 98.0 | 91.4 | 1438 | **81.5** | $1.75 |
-| 10 | **Claude Sonnet 4.6** | Anthropic | 91.8 | 93.8 | 97.8 | 89.9 | 1463 | **84.6** | $6.00 |
-| 10 | **Muse Spark** | Meta | 91.8 | 92.1 | 95.4 | 80.7 | 1489 | **84.6** | **$0.00**（免费） |
-| 10 | **Qwen 3.6 Max** | 阿里 | 90.5 | 90.8 | 94.6 | 77.2 | 1362 | **84.6** | $1.60 |
-| 10 | **DeepSeek V4 Pro** | DeepSeek | — | — | — | — | 1463 | **84.6** | **$0.43** |
-| 14 | **Claude Sonnet 4.5** | Anthropic | 89.1 | 90.8 | 97.7 | 83.4 | 1453 | **83.8** | $3.00 |
-| 15 | **GLM-5** | 智谱 | 89.7 | 88.1 | 94.5 | 86.2 | 1534 | **82.7** | $2.15 |
-| 17 | **GLM-5.1** | 智谱 | 91.2 | 90.5 | 95.3 | 77.8 | 1470 | **80.8** | $1.00 |
-| 18 | **MiniMax M2.7** | MiniMax | 89.2 | 86.8 | 93.5 | 82.1 | 1250 | **80.8** | **$0.32** |
-| 20 | **DeepSeek V3** | DeepSeek | 85.1 | 84.2 | 88.5 | 72.4 | 1424 | **79.4** | **$0.27** |
-| 21 | **Grok 4** | xAI | 88.0 | 87.5 | 93.2 | 81.8 | 1460 | **78.8** | $3.00 |
-| 23 | **DeepSeek V4 Flash** | DeepSeek | — | — | — | — | 1433 | **75.0** | **$0.14** |
-| 24 | **Gemini 2.0 Ultra** | Google | 90.8 | 89.6 | 95.2 | 90.4 | 1473 | **73.1** | $0.50 |
-| 24 | **Gemini 3 Flash** | Google | — | — | — | — | — | **73.1** | **$0.50** |
-| 28 | **DeepSeek V3.2** | DeepSeek | 89.5 | 89.3 | 93.2 | 75.8 | 1423 | **65.4** | **$0.28** |
-| 29 | **Gemini 2.5 Pro** | Google | 93.5 | 92.0 | 98.5 | 91.9 | 1486 | **63.5** | $2.00 |
-| 30 | **Gemma 3 27B** | Google | 80.5 | 79.8 | 83.8 | 68.5 | 950 | **59.6** | **$0.10** |
-| 31 | **GPT-5.4 mini** | OpenAI | 87.2 | 88.5 | 91.5 | 79.8 | 1456 | **28.8** | $1.69 |
-| 31 | **Mistral Large** | Mistral | 81.2 | 80.1 | 82.5 | 62.1 | 1415 | **28.8** | $2.00 |
-| 37 | **Qwen 3.5 397B** | 阿里 | 89.5 | 88.9 | 95.6 | 88.4 | 1067 | **25.3** | $0.60 |
-| 43 | **Llama 4 Maverick** | Meta | 87.2 | 86.1 | 91.5 | 78.2 | 1327 | **19.2** | **$0.20** |
-| 45 | **Llama 3.1 405B** | Meta | 79.8 | 79.2 | 78.5 | 60.8 | 1333 | **17.3** | $3.00 |
-
-### Chatbot Arena Elo 榜单（2026-04）
-
-> LMSYS 真实用户盲测，人类偏好投票
-
-| 排名 | 模型 | Elo |
-|------|------|-----|
-| 1 | **Claude Opus 4.7 Thinking** | **1504** |
-| 2 | **Claude Opus 4.6 Thinking** | 1502 |
-| 3 | **Claude Opus 4.7** | 1497 |
-| 4 | **Claude Opus 4.6** | 1496 |
-| 5 | **Muse Spark** | 1493 |
-| 6 | **Gemini 3.1 Pro Preview** | 1493 |
-| 7 | **Gemini 3 Pro** | 1486 |
-| 8 | **Grok 4.20** | 1482 |
-| 9 | **GPT-5.4 High** | 1482 |
-| 10 | **Grok 4.20 Reasoning** | 1480 |
-
-### SWE-bench Verified 编程榜单（2026-04）
-
-> 真实 GitHub Issues 自主解决率
-
-| 排名 | 模型 | SWE-bench Verified |
-|------|------|-------------------|
-| 1 | **Claude Opus 4.7** | **82.0%** |
-| 2 | **Gemini 3.1 Pro Preview** | 78.8% |
-| 3 | **Claude Opus 4.6 Thinking** | 78.2% |
-| 4 | **GPT-5.4** | 78.2% |
-| 5 | **GPT-5.3 Codex** | 78.0% |
-
-### Artificial Analysis Intelligence Index（2026-04）
-
-> 综合推理指数
-
-| 模型 | AA Index |
-|------|----------|
-| Claude Opus 4.7 | **57** |
-| Gemini 3.1 Pro Preview | **57** |
-| GPT-5.4 | **57** |
-| Kimi K2.6 | **54** |
-| Claude Opus 4.6 | 53 |
-| GPT-5.3 Codex | 53 |
-| DeepSeek V4 Pro | 52 |
+> 💡 **2026年6月关键变化**：Claude Fable 5 以多个 benchmark 第一发布，但因可用性限制目前不适合作为默认选型；可用模型中 Claude Opus 4.8 是综合最强候选，GPT-5.5 与 Gemini 3.1 Pro 紧随其后。Coding 场景应优先看 SWE-bench Pro，而不是已经饱和/污染的 SWE-bench Verified。
 
 ---
 
-## 编程 Code 专项榜单（2026年4月）
+## 综合榜单（2026年6月）
 
-> ⚠️ SWE-bench Verified 存在数据污染问题（OpenAI 内部审计发现训练数据泄露），建议参考 SWE-bench Pro（Scale AI 独立评测，污染可控）。
+> 多源手工汇总，优先标注「可用性」和「数据口径」。同一模型在不同 harness / scaffold 下分数不可直接混排。
 
-### SWE-bench Verified（500题，污染方向偏高分）
+| 排名 | 模型 | 公司 | 可用性 | GPQA | SWE Verified | SWE Pro | Arena Elo | AA v4.1 | 价格（In/Out） | 备注 |
+|------|------|------|--------|------|--------------|---------|-----------|---------|----------------|------|
+| 1* | **Claude Fable 5** | Anthropic | 暂停/不可用 | ~95% | **95.0%** | **80.3%**（vendor） | 1510±11 | **60** | $10 / $50 | benchmark #1，但当前不能作为实际默认选择 |
+| 2 | **Claude Opus 4.8** | Anthropic | 可用 | 93.6% | **88.6%** | 69.2%（vendor） | 1486±7（thinking） | **56** | $5 / $25 | 当前可用综合最强；coding/agentic 强 |
+| 3 | **GPT-5.5** | OpenAI | 可用 | 93.6% | 82.6%（Vals） | 58.6%（vendor） | 1481±5（high） | 55 | $5 / $30 | 接近 Opus 4.8，成本低于 Opus |
+| 4 | **Gemini 3.1 Pro** | Google | 可用 | **94.3%** | 78.8-80.6% | 46.1%（SEAL）/ 54.2%（vendor） | 1487±4 | 46 | $2 / $12 | 推理/成本比优秀，GPQA 领先 |
+| 5 | **Claude Opus 4.6 Thinking** | Anthropic | 可用 | — | 78.2-80.8% | 51.9%（SEAL）/ 47.1%（commercial） | **1504±4** | — | $5 / $25 | LMArena 仍很强；商业代码集表现稳定 |
+| 6 | **Muse Spark** | Meta | 可用性待确认 | — | — | 55.0%（SEAL） | 1487±6（prelim） | — | N/A | SWE-bench Pro SEAL 第二；Arena 票量较少 |
+| 7 | **MiniMax M3** | MiniMax | 开放权重/待发布口径 | 92.7% | 80.5%（tracker） | 暂无 SEAL | 1451±7 | 44 | N/A | open-weight 阵营新强者 |
+| 8 | **Kimi K2.6** | Moonshot | 开放权重 | 90.5% | 80.2%（tracker） | 暂无 SEAL | 1462±5 | 43 | $0.95 / $4 | open-weight coding 重点关注 |
+| 9 | **DeepSeek V4 Pro** | DeepSeek | 开放权重/API | 72.8%* | 80.6%* | 暂无 SEAL | 1457±5 | 44 | $0.43 / $0.87 | 成本极低；部分分数仍 vendor/third-party reported |
+| 10 | **Qwen3.7 Max Preview** | Alibaba | 待确认 | TBD | TBD | 暂无 SEAL | 1474±10 | — | $1.25 / $3.75 | Arena 强，完整 GPQA/SWE 待发布 |
 
-| 排名 | 模型 | Verified | 备注 |
-|------|------|----------|------|
-| 1 | **Claude Mythos Preview** | **93.9%** | Anthropic（推理模式） |
-| 2 | **GPT-5.3 Codex** | **85.0%** | OpenAI 编程专项 |
-| 3 | **Claude Opus 4.6** | 80.9% | Anthropic |
-| 4 | **Claude Opus 4.5** | 80.9% | Anthropic |
-| 5 | **Claude Sonnet 4.6** | 78.0% | Anthropic（性价比） |
+\* Fable 5、DeepSeek V4 部分数据来自发布/第三方汇总，独立复现不足；Fable 5 当前不可用。
+
+### Chatbot Arena Elo 榜单（2026-06-16）
+
+> 来源：Cherry Studio 的 LMArena 自动镜像。Arena Elo 是人类偏好分，不等于任务能力；preliminary 行需要结合票量看。
+
+| 排名 | 模型 | Elo | Votes | 价格（In/Out） |
+|------|------|-----|-------|----------------|
+| 1 | **Claude Fable 5** | **1510±11** | 2,883 | $10 / $50 |
+| 2 | **Claude Opus 4.6 Thinking** | 1504±4 | 42,797 | $5 / $25 |
+| 3 | **Claude Opus 4.7 Thinking** | 1502±5 | 28,900 | $5 / $25 |
+| 4 | **Claude Opus 4.6** | 1498±4 | 45,808 | $5 / $25 |
+| 5 | **Claude Opus 4.7** | 1492±5 | 29,924 | $5 / $25 |
+| 6 | **Muse Spark** | 1487±6 | 13,511 | N/A |
+| 7 | **Gemini 3.1 Pro Preview** | 1487±4 | 55,403 | $2 / $12 |
+| 8 | **Gemini 3 Pro** | 1486±4 | 41,317 | $2 / $12 |
+| 9 | **Claude Opus 4.8 Thinking** | 1486±7 | 9,190 | $5 / $25 |
+| 10 | **GPT-5.5 High** | 1481±5 | 24,620 | $5 / $30 |
+
+### SWE-bench Verified 编程榜单（2026-06-13）
+
+> 来源：Vals.ai，统一 bash-only harness。Verified 已被认为存在污染/饱和问题，适合看趋势，不适合作为 frontier coding 唯一排序。
+
+| 排名 | 模型 | SWE-bench Verified | 备注 |
+|------|------|-------------------|------|
+| 1 | **Claude Fable 5** | **95.0%** | 当前不可用 |
+| 2 | **Claude Opus 4.8** | **88.6%** | 当前可用最高 |
+| 3 | **GPT-5.5** | 82.6% | OpenAI frontier |
+| 4 | **Claude Opus 4.7** | 82.0% | Anthropic |
+| 5 | **Gemini 3.5 Flash** | 78.8% | 高速/较低成本 |
 | 6 | **Gemini 3.1 Pro Preview** | 78.8% | Google |
-| 7 | **GPT-5.4** | 78.2% | OpenAI |
-| 8 | **DeepSeek V4 Pro** | 80.6% | DeepSeek |
-| 9 | **MiniMax M2.5** | 80.2% | MiniMax |
-| 10 | **Kimi K2.5** | 70.8% | Moonshot（老版本） |
+| 7 | **GPT-5.4 (xhigh)** | 78.2% | OpenAI |
+| 8 | **Claude Opus 4.6 Thinking** | 78.2% | Anthropic |
+| 9 | **Kimi K2.7 Code** | 78.2% | Moonshot coding |
+| 10 | **GPT-5.3 Codex** | 78.0% | OpenAI coding |
 
-### SWE-bench Pro（1865题，Scale AI 独立评测，污染可控）
+### Artificial Analysis Intelligence Index v4.1（2026-06-16）
 
-> 最难、最干净的真实编程评测，私人代码库+商业代码库无法污染
+> v4.1 调整后更重视 agentic workloads：GDPval-AA v2 20%、Terminal-Bench 2.1 16%、τ³-Bench Banking 14%。以下采用 v4.1 文章中的 rebased 分数。
 
-| 排名 | 模型 | Pro | 备注 |
-|------|------|------|------|
-| 1 | **Kimi K2.6** | **58.6%** | Moonshot AI（开源，2026-04-20） |
-| 2 | **GPT-5.4** | 57.7% | OpenAI |
-| 3 | **Claude Opus 4.6** | 53.4% | Anthropic |
-| 4 | **DeepSeek V4 Pro** | 55.4% | DeepSeek |
-| 5 | **GLM-5** | 77.8% | 智谱（引用数据，待确认） |
+| 排名 | 模型 | AA v4.1 | 备注 |
+|------|------|---------|------|
+| 1 | **Claude Fable 5 + Opus 4.8 fallback** | **60** | 当前不可用；GDPval-AA v2 1818 |
+| 2 | **Claude Opus 4.8 Max** | **56** | 当前可用最高；$1.78 / task |
+| 3 | **GPT-5.5 xhigh** | 55 | 与 Opus 4.8 接近；$0.99 / task |
+| 4 | **Gemini 3.1 Pro Preview** | 46 | 速度/成本表现好 |
+| 5 | **DeepSeek V4 Pro Max** | 44 | open-weight/低成本；$0.04 / task |
+| 5 | **MiniMax M3** | 44 | open-weight 领先组 |
+| 7 | **Kimi K2.6** | 43 | open-weight 领先组 |
+| 8 | **MiMo-V2.5-Pro** | 42 | open-weight 领先组 |
 
-### HumanEval（164题函数补全，最经典但最简单）
+---
 
-| 排名 | 模型 | HumanEval |
-|------|------|----------|
-| 1 | **Claude Opus 4.6** | **96.4%** |
-| 2 | **GPT-5.4** | 96.3% |
-| 3 | **GPT-5.3 Codex** | 95.8% |
-| 4 | **Claude Sonnet 4.6** | 93.8% |
-| 5 | **Gemini 3.1 Pro** | 93.2% |
-| 6 | **Kimi K2.6** | 90.1% |
-| 7 | **DeepSeek V4 Pro** | 93.5% |
+## 编程 Code 专项榜单（2026年6月）
 
-### LiveCodeBench（最新代码能力连续评测）
+> ⚠️ 结论先行：2026 年之后真实 coding 选型应优先看 SWE-bench Pro（尤其 commercial/private set），Verified 更像「上限和营销信号」。
 
-| 排名 | 模型 | LiveCodeBench |
-|------|------|---------------|
-| 1 | **Kimi K2.6** | **~75%**（全场领先） |
-| 2 | **DeepSeek V4 Pro** | 55.4% |
+### SWE-bench Pro — Scale SEAL Public Set（731 tasks）
+
+> 统一 scaffolding，Pass@1；这是当前最可比的公开 Pro 榜单。
+
+| 排名 | 模型 | Pro Public | 95% CI | 备注 |
+|------|------|------------|--------|------|
+| 1 | **GPT-5.4 (xHigh)** | **59.1%** | ±3.56 | SEAL public 第一 |
+| 2 | **Muse Spark** | 55.0% | ±3.60 | 新 entry |
+| 3 | **Claude Opus 4.6 Thinking** | 51.9% | ±3.61 | Anthropic 可比最高 |
+| 4 | **Gemini 3.1 Pro Thinking** | 46.1% | ±3.60 | Google |
+| 5 | **Claude Opus 4.5** | 45.9% | ±3.60 | Anthropic |
+| 6 | **Claude Sonnet 4.5** | 43.6% | ±3.60 | 性价比线 |
+| 7 | **Gemini 3 Pro Preview** | 43.3% | ±3.60 | Google |
+| 8 | **Claude Sonnet 4** | 42.7% | ±3.59 | Anthropic |
+| 9 | **GPT-5 High** | 41.8% | ±3.49 | OpenAI |
+| 10 | **GPT-5.2 Codex** | 41.0% | ±3.57 | OpenAI coding |
+
+### SWE-bench Pro — Commercial Set（276 private tasks）
+
+> 私有商业代码库，更接近企业内部代码；样本较小，CI 更宽。
+
+| 排名 | 模型 | Commercial | Public Set | 备注 |
+|------|------|------------|------------|------|
+| 1 | **Claude Opus 4.6 Thinking** | **47.1%** | 51.9% | 私有代码集最稳 |
+| 2 | **Muse Spark** | 44.7% | 55.0% | public 到 private 掉点明显 |
+| 3 | **GPT-5.4 (xHigh)** | 43.4% | 59.1% | public 第一，private 第三 |
+| 4 | **Gemini 3.1 Pro Thinking** | 32.2% | 46.1% | private 掉点大 |
+| 5 | **GPT-5.2 Codex** | 27.7% | 41.0% | OpenAI coding |
+
+### SWE-bench Pro — Vendor-reported（不可与 SEAL 直接比较）
+
+| 模型 | Pro | 口径 | 备注 |
+|------|-----|------|------|
+| **Claude Fable 5** | **80.3%** | Anthropic scaffold | 当前不可用 |
+| **Claude Mythos Preview** | 77.8% | Anthropic scaffold | 当前不可用 |
+| **Claude Opus 4.8** | 69.2% | Anthropic scaffold | 可用模型最高 vendor score |
+| **GPT-5.5** | 58.6% | vendor scaffold | OpenAI |
+| **Gemini 3.1 Pro** | 54.2% | vendor scaffold | Google |
 
 ### 编程选型建议
 
 | 场景 | 推荐 | 原因 |
 |------|------|------|
-| **真实 Bug 修复（生产环境）** | Claude Opus 4.7 | Verified 82%，Pro 独立验证最强 |
-| **成本敏感** | Kimi K2.6 | 开源，Pro 58.6%，价格 $0.60/M |
-| **竞赛/函数级代码** | GPT-5.4 / Claude Opus 4.6 | HumanEval 96%+ |
-| **最新代码能力** | Kimi K2.6 | LiveCodeBench 领先 |
-| **中文项目** | DeepSeek V4 Pro / GLM-5 | 中文代码专项优化 |
+| **真实生产 Bug 修复 / 私有代码库** | Claude Opus 4.8；若只看 SEAL commercial，Claude Opus 4.6 Thinking | Opus 系列在 Verified、vendor Pro、commercial set 都稳定 |
+| **公开可比 Pro 分数** | GPT-5.4 (xHigh) | Scale SEAL public set 59.1% 第一 |
+| **高性价比工程任务** | Gemini 3.1 Pro / GPT-5.5 | 能力接近 frontier，价格低于 Opus |
+| **开放权重 coding** | Kimi K2.6 / MiniMax M3 / DeepSeek V4 Pro；SEAL Pro 关注 Qwen3 Coder 480B | Verified 和 GPQA 进入 frontier 区间，但 Pro 覆盖仍薄 |
+| **低延迟/批量任务** | Gemini 3.5 Flash / Grok 4.3 / DeepSeek V4 Flash | 成本和速度优先，适合结构化任务 |
+| **不可作为默认** | Claude Fable 5 | benchmark 强但当前不可用，除非恢复访问 |
 
 ---
 
-## 分项冠军（2026年4月）
+## 分项冠军（2026年6月）
 
-| 场景 | 冠军 | 分数 |
-|------|------|------|
-| **综合得分** | GPT-5.5 High | 98.1 |
-| **用户偏好 Arena** | Claude Opus 4.7 Thinking | 1504 Elo |
-| **编程 SWE-bench Verified** | Claude Mythos Preview | 93.9% |
-| **编程 SWE-bench Pro（干净）** | Kimi K2.6 | 58.6% |
-| **编程 HumanEval** | Claude Opus 4.6 | 96.4% |
-| **数学 MATH** | Claude Opus 4.6 | 98.2% |
-| **科学推理 GPQA** | Gemini 3.1 Pro | 94.1% |
-| **推理综合 AA Index** | Claude 4.7 / Gemini 3.1 / GPT-5.4 | 并列 57 |
-| **开源第一** | Kimi K2.6 | Arena 1529 / AA Index 54 |
-| **性价比第一** | DeepSeek V4 Flash | $0.14/M / Arena 1433 |
-| **免费最强** | Muse Spark (Meta) | $0 / 综合 84.6 |
-| **超长上下文** | Gemini 3.1 Pro | 1M token |
-| **最新开源** | DeepSeek V4 Pro | 2026-04-24 |
-
----
-
-## 关键洞察（2026年4月）
-
-1. **三足鼎立**：Claude Opus 4.7、Gemini 3.1 Pro、GPT-5.4 在 AA Index 并列第一（57分），纯benchmark难分伯仲
-2. **Anthropic 用户粘性最强**：Arena Elo 前5名 Anthropic 占4席，用户体验护城河深
-3. **开源新王 Kimi K2.6**：1T MoE / 32B 激活参数，Arena Elo 1529（全场最高），进入第一梯队
-4. **DeepSeek V4 搅局**：2026-04-24 发布，Pro 版本 $0.43/M，Flash $0.14/M，开源最强价格杀手
-5. **Meta 免费入场**：Muse Spark 综合 84.6 分完全免费，不可忽视
-6. **GPT-5.5 是新天花板**：综合 98.1 分，GPT-5 系列已到 5.5 代
-7. **o系列推理模型待独立评测**：o3-pro、o4-mini 等尚未有独立 benchmark 分数（n=0）
+| 场景 | 冠军 | 分数/状态 |
+|------|------|-----------|
+| **Benchmark 绝对第一** | Claude Fable 5 | 多榜第一，但当前不可用 |
+| **可用综合第一** | Claude Opus 4.8 | AA v4.1 可用第一；SWE Verified 88.6% |
+| **用户偏好 Arena** | Claude Fable 5 | 1510±11（票量低/不可用）；稳定可用榜看 Opus 4.6 Thinking 1504±4 |
+| **编程 SWE-bench Verified** | Claude Fable 5 / Claude Opus 4.8 | 95.0%（不可用）/ 88.6%（可用） |
+| **编程 SWE-bench Pro（vendor）** | Claude Fable 5 / Claude Opus 4.8 | 80.3%（不可用）/ 69.2%（可用） |
+| **编程 SWE-bench Pro（SEAL public）** | GPT-5.4 (xHigh) | 59.1% |
+| **编程 SWE-bench Pro（commercial/private）** | Claude Opus 4.6 Thinking | 47.1% |
+| **科学推理 GPQA（可用）** | Gemini 3.1 Pro | 94.3% |
+| **AA Intelligence Index（可用）** | Claude Opus 4.8 Max | 56（v4.1） |
+| **Open-weight 综合** | MiniMax M3 / Kimi K2.6 / DeepSeek V4 Pro | AA 44/43/44；coding 分数需看口径 |
+| **成本效率** | DeepSeek V4 Pro Max | AA v4.1 约 $0.04 / task |
+| **速度/高吞吐** | Gemini 3.5 Flash | 适合低延迟结构化任务 |
 
 ---
 
-## 新模型速览（2026年4月新发布）
+## 关键洞察（2026年6月）
 
-| 模型 | 发布日期 | 亮点 |
-|------|----------|------|
-| **DeepSeek V4** | 2026-04-24 | 开源最强，MoE，Pro $0.43/M，Flash $0.14/M |
-| **Claude Opus 4.7** | 2026-04-16 | SWE-bench 82%，Arena 1504 |
-| **Muse Spark** | 2026-04 | Meta 免费模型，综合 84.6 |
-| **GLM-5 / GLM-5.1** | 2026-04 | 智谱最新，Arena 1534（全场最高 Elo）|
-| **Qwen 3.6 Max** | 2026-04 | 阿里闭源旗舰，综合 84.6 |
-| **Grok 4.20** | 2026-04 | xAI 推理增强版，Arena 1482 |
+1. **“榜首”与“可用”分离**：Claude Fable 5 在多个 benchmark 上第一，但当前不可用；实际默认选型应从 Claude Opus 4.8、GPT-5.5、Gemini 3.1 Pro 中选。
+2. **Coding benchmark 已换代**：SWE-bench Verified 已接近饱和并存在污染争议；SWE-bench Pro 的 public/commercial set 更能反映真实工程难度。
+3. **同名 SWE-bench Pro 分数不能混用**：Scale SEAL public、Scale commercial、vendor scaffold 分数差距可达 10-30 个点，必须注明口径。
+4. **Opus 4.8 是当前可用综合第一**：AA v4.1、SWE Verified、vendor Pro 都显示 Opus 4.8 处在可用模型前列。
+5. **GPT-5.5 是强竞争者**：AA v4.1 与 Opus 4.8 只差 1 分，SWE Pro vendor 58.6%，价格低于 Opus 输出价。
+6. **Gemini 3.1 Pro 的优势是成本/推理**：GPQA 94.3%、$2/$12 价格，使其适合高量推理任务。
+7. **Open-weight 阵营进入 frontier 边缘**：Kimi K2.6、MiniMax M3、DeepSeek V4 Pro 在 Verified/AA/GPQA 上接近闭源模型，但独立 Pro 覆盖仍不足。
+
+---
+
+## 新模型/变化速览（2026年5-6月）
+
+| 模型/事件 | 日期 | 亮点 |
+|-----------|------|------|
+| **Claude Fable 5** | 2026-06-09 | 多项 benchmark 第一；随后因可用性限制暂停 |
+| **Claude Opus 4.8** | 2026-05-28 | 当前可用综合最强候选，SWE Verified 88.6%，vendor Pro 69.2% |
+| **Artificial Analysis v4.1** | 2026-06-16 | 权重转向 agentic workloads，加入/升级 GDPval-AA v2、Terminal-Bench 2.1、τ³-Bench Banking |
+| **MiniMax M3** | 2026-06 | open-weight 领先组，AA v4.1 44；SWE-bench Pro 独立覆盖仍待补齐 |
+| **Kimi K2.6 / K2.7 Code** | 2026-05/06 | open-weight coding 重点关注，Verified 进入 78-80% 区间 |
+| **Qwen3.7 Max Preview** | 2026-06 | Arena 1474±10，完整 GPQA/SWE 待确认 |
+| **NVIDIA Nemotron 3 Ultra** | 2026-06 | 美国 open-weight 新高，AA Index 48（changelog） |
 
 ---
 
 ## 待探索
 
-- [ ] GPT-5.5、Claude Opus 4.7 完整独立评测数据（当前多为 vendor-reported）
-- [ ] GPT-o3-pro、o4-mini 等新 o 系列独立 benchmark
-- [ ] 端侧/本地部署模型评测（Llama 4 Scout、Gemma 3）
-- [ ] 各模型实际部署成本对比
+- [ ] Claude Fable 5 恢复访问与否，以及停用事件后各榜单是否保留其排名
+- [ ] Claude Opus 4.8 / GPT-5.5 / Gemini 3.1 Pro 在统一 SWE-bench Pro SEAL 上的完整直接对比
+- [ ] Kimi K2.6、MiniMax M3、DeepSeek V4 Pro 的独立 SWE-bench Pro 结果
+- [ ] GPT-o3-pro、o4-mini 等 o 系列在新 agentic benchmark（GDPval-AA v2、τ³-Bench）下的表现
+- [ ] 各模型真实部署成本：tokenizer 差异、cache 命中、工具调用开销、latency
 
 ---
 
 ## 相关链接
 
-- 商业模型排名：https://neuralstackly.com/benchmarks
-- 开源模型排名：https://www.onyx.app/open-llm-leaderboard
-- LM Arena：https://lmarena.ai
-- 汇总排名：https://www.datalearner.com/leaderboards
-- ofox.ai 2026-04 排名：https://ofox.ai/blog/llm-leaderboard-best-ai-models-ranked-2026/
+- LMArena： https://lmarena.ai
+- Cherry Studio LMArena mirror： https://docs.cherry-ai.com/docs/en-us/other/lmarena
+- Artificial Analysis Intelligence Index： https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index
+- Artificial Analysis v4.1 说明： https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-1
+- Vals.ai SWE-bench Verified： https://vals.ai/benchmarks/swebench
+- SWE-bench 官方 Verified： https://www.swebench.com/verified
+- SWE-bench Pro 汇总： https://www.morphllm.com/swe-bench-pro
+- Awesome Agents 2026-06 月榜： https://awesomeagents.ai/leaderboards/overall-llm-rankings-jun-2026/
+- 商业模型旧源（4月快照）： https://neuralstackly.com/
+- Open LLM Leaderboard： https://www.onyx.app/open-llm-leaderboard
+- 汇总排名： https://www.datalearner.com/leaderboards
