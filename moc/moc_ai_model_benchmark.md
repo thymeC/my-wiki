@@ -185,7 +185,7 @@
 | **Claude Fable 5** | 2026-06-09 | 多项 benchmark 第一；随后因可用性限制暂停 |
 | **Claude Opus 4.8** | 2026-05-28 | 当前可用综合最强候选，SWE Verified 88.6%，vendor Pro 69.2% |
 | **Artificial Analysis v4.1** | 2026-06-16 | 权重转向 agentic workloads，加入/升级 GDPval-AA v2、Terminal-Bench 2.1、τ³-Bench Banking |
-| **MiniMax M3** | 2026-06 | open-weight 领先组，AA v4.1 44，SWE Pro SEAL public 55.0% |
+| **MiniMax M3** | 2026-06 | open-weight 领先组，AA v4.1 44；SWE-bench Pro 独立覆盖仍待补齐 |
 | **Kimi K2.6 / K2.7 Code** | 2026-05/06 | open-weight coding 重点关注，Verified 进入 78-80% 区间 |
 | **Qwen3.7 Max Preview** | 2026-06 | Arena 1474±10，完整 GPQA/SWE 待确认 |
 | **NVIDIA Nemotron 3 Ultra** | 2026-06 | 美国 open-weight 新高，AA Index 48（changelog） |
@@ -211,6 +211,7 @@
 - Vals.ai SWE-bench Verified： https://vals.ai/benchmarks/swebench
 - SWE-bench 官方 Verified： https://www.swebench.com/verified
 - SWE-bench Pro 汇总： https://www.morphllm.com/swe-bench-pro
+- Awesome Agents 2026-06 月榜： https://awesomeagents.ai/leaderboards/overall-llm-rankings-jun-2026/
 - 商业模型旧源（4月快照）： https://neuralstackly.com/
 - Open LLM Leaderboard： https://www.onyx.app/open-llm-leaderboard
 - 汇总排名： https://www.datalearner.com/leaderboards
