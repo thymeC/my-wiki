@@ -19,6 +19,7 @@
 | 主题 MOC | 说明 |
 |----------|------|
 | [[moc_ai_model_benchmark]] | AI 主流模型 Benchmark 评测结果汇总 |
+| [[moc_health_fitness_nutrition]] | 健康运动与饮食：蛋白质摄入、配餐思路 |
 | [[moc_ide_plugins]] | IDE / 编辑器插件与主题（含 Cursor 等） |
 | [[moc_vscode_ide]] | VS Code / Cursor 界面图标过大时的缩放与字体设置 |
 | [[organization-models-reference]] | **目录/PKM 模型通识**（合并稿，在 `areas/management/`） |

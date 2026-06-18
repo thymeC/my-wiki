@@ -7,6 +7,7 @@
 
 * **MOC**
   * [AI Benchmark](moc/moc_ai_model_benchmark.md)
+  * [健康运动与饮食](moc/moc_health_fitness_nutrition.md)
   * [IDE 插件与主题](moc/moc_ide_plugins.md)
   * [VS Code / Cursor 界面缩放](moc/moc_vscode_ide.md)
   * [React 部署](moc/moc_react_deployment.md)
