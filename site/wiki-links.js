@@ -5,6 +5,7 @@ window.WIKI_LINKS = {
   REPO_LAYOUT: "REPO_LAYOUT.md",
   moc_index: "moc/moc_index.md",
   moc_ai_model_benchmark: "moc/moc_ai_model_benchmark.md",
+  moc_open_source: "moc/moc_open_source.md",
   moc_ide_plugins: "moc/moc_ide_plugins.md",
   moc_vscode_ide: "moc/moc_vscode_ide.md",
   moc_react_deployment: "moc/moc_react_deployment.md",
