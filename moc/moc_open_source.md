@@ -183,4 +183,3 @@ This is my first contribution to the project, so feedback is welcome.
 - [GitHub topic: good-first-issue](https://github.com/topics/good-first-issue)
 - [GitHub topic: help-wanted](https://github.com/topics/help-wanted)
 - [How to contribute to open source for the first time](https://codably.dev/open-source/how-to-contribute-to-open-source-for-the-first-time)
-
