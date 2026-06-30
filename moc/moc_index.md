@@ -20,6 +20,7 @@
 |----------|------|
 | [[moc_ai_model_benchmark]] | AI 主流模型 Benchmark 评测结果汇总 |
 | [[moc_ide_plugins]] | IDE / 编辑器插件与主题（含 Cursor 等） |
+| [[moc_tableau_prep_builder]] | Tableau Prep Builder 用法、数据准备流程与个人经验 |
 | [[moc_vscode_ide]] | VS Code / Cursor 界面图标过大时的缩放与字体设置 |
 | [[organization-models-reference]] | **目录/PKM 模型通识**（合并稿，在 `areas/management/`） |
 | [[moc_category_rule]] · [[moc_organization_models]] | 仅占位文件，链向合并稿，保留旧链接 |
